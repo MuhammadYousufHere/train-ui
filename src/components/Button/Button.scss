@@ -1,0 +1,31 @@
+@use "../../styles/colors" as *;
+
+.btn-primary {
+  padding: 1.4rem 4rem;
+  background-color: $bg-primary;
+  border: none;
+  color: $text-white;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+  transition: 0.3s all;
+  min-width: fit-content;
+  p {
+    margin: 0;
+    font-size: clamp(1rem, 1.0058vw, 1rem);
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .btn-primary {
+    padding: 1.4rem 3rem;
+
+    p {
+    }
+  }
+}
+@media (max-width: 768px) {
+}

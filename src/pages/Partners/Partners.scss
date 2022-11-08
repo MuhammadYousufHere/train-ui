@@ -1,0 +1,54 @@
+@use "../../styles/colors" as *;
+
+$padding-xxl: 4rem 5.5rem;
+$padding-xl: 3rem 2.5rem;
+
+.partners-container {
+  padding: $padding-xxl;
+  background-color: $bg-light;
+  .partners-content,
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .partners-content {
+    flex-direction: column;
+    text-align: center;
+    .row {
+      h1 {
+        margin: 1rem 0 2rem 0;
+        padding: 0;
+        color: $text-main;
+        font-weight: 900;
+        font-size: clamp(0.85rem, 2.033rem + 0.4858vw, 6.25rem);
+        text-transform: capitalize;
+      }
+      .partners-list {
+        max-width: 95%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
+        grid-row: auto;
+        .partners-item {
+          padding: 1rem 0.6rem;
+          background: $bg-white;
+          max-width: 220px;
+          outline: 1.5px solid rgb(218, 211, 211);
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .partners-container {
+    padding: $padding-xl;
+  }
+}
+@media (max-width: 768px) {
+}
